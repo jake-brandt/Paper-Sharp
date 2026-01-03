@@ -230,16 +230,25 @@
 
 								</div>
 								<div class="content-text work-listing education-listing">
-										{{#if (and company position)}}
+										{{#if (or (or position role) (or company name))}}
 										{{#if @first}}
 											<p class="small-center first-listing">
 											{{else}}
 											<p class="small-center">
 										{{/if}}
-												{{#if website}}
-													<strong>{{position}}</strong> at <strong><a href="{{website}}" class="no-nl" rel="noopener">{{company}}</a></strong>
-												{{else}}
-													<strong>{{position}}</strong> at <strong>{{company}}</strong>
+												{{#if (or position role)}}
+													<strong>{{#if position}}{{position}}{{else}}{{role}}{{/if}}</strong>
+												{{/if}}
+
+												{{#if (or company name)}}
+													{{#if (or position role)}} at {{/if}}
+													<strong>
+														{{#if website}}
+															<a href="{{website}}" class="no-nl" rel="noopener">{{#if company}}{{company}}{{else}}{{name}}{{/if}}</a>
+														{{else}}
+															{{#if company}}{{company}}{{else}}{{name}}{{/if}}
+														{{/if}}
+													</strong>
 												{{/if}}
 											</p>
 										{{/if}}
@@ -258,16 +267,25 @@
 										{{#if assignments.length}}
 											{{#each assignments}}
 												<section class="assignment">
-													{{#if (and company position)}}
+													{{#if (or (or position role) (or company name))}}
 													{{#if @first}}
 														<p class="small-center first-listing">
 														{{else}}
 														<p class="small-center">
 													{{/if}}
-															{{#if website}}
-																<strong>{{position}}</strong> at <strong><a href="{{website}}" class="no-nl" rel="noopener">{{company}}</a></strong>
-															{{else}}
-																<strong>{{position}}</strong> at <strong>{{company}}</strong>
+															{{#if (or position role)}}
+																<strong>{{#if position}}{{position}}{{else}}{{role}}{{/if}}</strong>
+															{{/if}}
+
+															{{#if (or company name)}}
+																{{#if (or position role)}} at {{/if}}
+																<strong>
+																	{{#if website}}
+																		<a href="{{website}}" class="no-nl" rel="noopener">{{#if company}}{{company}}{{else}}{{name}}{{/if}}</a>
+																	{{else}}
+																		{{#if company}}{{company}}{{else}}{{name}}{{/if}}
+																	{{/if}}
+																</strong>
 															{{/if}}
 														</p>
 													{{/if}}
@@ -448,16 +466,25 @@
 
 								</div>
 								<div class="content-text work-listing education-listing">
-										{{#if (and organization position)}}
+										{{#if (or (or position role) (or organization company))}}
 										{{#if @first}}
 											<p class="first-listing small-center">
 											{{else}}
 											<p class="small-center">
 										{{/if}}
-												{{#if website}}
-													<strong>{{position}}</strong> <span class="no-nl">at <strong><a href="{{website}}" rel="noopener">{{organization}}</a></strong></span>
-												{{else}}
-													<strong>{{position}}</strong> <span class="no-nl">at <strong>{{organization}}</strong></span>
+												{{#if (or position role)}}
+													<strong>{{#if position}}{{position}}{{else}}{{role}}{{/if}}</strong>
+												{{/if}}
+
+												{{#if (or organization company)}}
+													{{#if (or position role)}} <span class="no-nl">at</span> {{/if}}
+													<strong>
+														{{#if website}}
+															<a href="{{website}}" rel="noopener">{{#if organization}}{{organization}}{{else}}{{company}}{{/if}}</a>
+														{{else}}
+															{{#if organization}}{{organization}}{{else}}{{company}}{{/if}}
+														{{/if}}
+													</strong>
 												{{/if}}
 											</p>
 										{{/if}}
