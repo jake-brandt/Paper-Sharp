@@ -9,6 +9,11 @@ function render(resume) {
 	var standardCSS = fs.readFileSync(__dirname + "/css/style.css", "utf-8");
 	var screenCSS = fs.readFileSync(__dirname + "/css/screen.css", "utf-8");
 
+	// JSON Resume uses `basics.url`; this theme historically used `basics.website`.
+	if (resume && resume.basics && !resume.basics.website && resume.basics.url) {
+		resume.basics.website = resume.basics.url;
+	}
+
 	// Get a country from the country code
 	resume.basics.location.country = countries[resume.basics.location.countryCode];
 
