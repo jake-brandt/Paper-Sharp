@@ -1,17 +1,17 @@
 {
-  "name": "jsonresume-theme-paper-plus-plus",
+  "name": "jsonresume-theme-paper-simplified",
   "version": "0.6.0",
   "description": "A theme for JSON Resume",
-  "author": "Johan Lindell",
+  "author": "Jake Brandt",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lindell/jsonresume-theme-paper"
+    "url": "https://github.com/jake-brandt/Paper-Sharp"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": ">=4.0.0"
   },
-  "homepage": "https://github.com/lindell/jsonresume-theme-paper",
+  "homepage": "https://github.com/jake-brandt/Paper-Sharp",
   "main": "index.js",
   "scripts": {
     "start": "resume serve"
