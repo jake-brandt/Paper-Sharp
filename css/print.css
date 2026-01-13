@@ -1,145 +1,49 @@
-
 body, html {
-  background-color: white;
-  padding-top: 1.5em;
-  font-size:12pt;
-  font-family: "Merriweather";
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  line-height: 1.35;
 }
 
-a{
+a {
+  color: #000000;
   text-decoration: none;
-  color: #000;
 }
 
-h2{
-  margin-top:0em;
+.resume {
+  margin: 0;
+  padding: 0 18px;
+  max-width: 100%;
 }
 
-.paper {
-  width:100%;
-  border: 0;
-
-  padding-top: 0;
+.header {
+  border-bottom: 1px solid #bfbfbf;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
 }
 
-header p {
-  font-size: 1.3em;
+.section h2 {
+  border-bottom: 1px solid #bfbfbf;
 }
 
-.subtitle {
-  font-size: 0.7em;
+.entry {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-after: auto;
+  page-break-after: auto;
 }
 
-.header-pic {
-  float:left;
+.bullets {
+  margin-left: 16px;
 }
 
-.pic{
-  height:4.2em;
-  width:4.2em;
-
-  transform: translate(-8em, 1.9em);
+.sub-entry {
+  border-left: 1px solid #bfbfbf;
 }
 
-.profiles {
-  display:none;
-}
-
-.profiles-print{
-  display: table;
-}
-
-.content {
-  page-break-inside:avoid;
-  page-break-after:auto;
-}
-
-.header-text {
-  float:left;
-  margin-top: -1.6em;
-}
-
-.content-wrapper > .content:first-child {
-  padding-top: 2em;
-}
-
-.content:last-child {
-  padding-bottom: 0;
-}
-
-.content-cat {
-  width:25%;
-  position: relative;
-  right: 4%;
-  color:black;
-}
-
-.content-cat p {
-  font-size:0.5em;
-  font-weight: 600;
-}
-
-header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
-  color:black;
-}
-
-.content-text.skills-listing > ul > li span, .subtitle {
-  color:#212121;
-}
-
-.content-text ul:last-child {
-  margin-bottom: 0.25em;
-}
-
-.content-text ul li:first-child {
-  width:50%;
-}
-
-.profiles-listing ul li:first-child {
-  width:32%;
-}
-
-div.content-text.skills-listing > ul > li {
-  width:33%;
-}
-
-.work-listing p {
-  margin-bottom: 0.1em;
-}
-
-div.content-text.skills-listing > ul > li > p {
-  margin-top: 0.4em;
-  margin-bottom: 0.5em;
-}
-
-div.content-text.skills-listing > ul > li {
-  padding-left: 1.5em;
-}
-
-div.content-text.skills-listing > ul > li:first-child {
-  padding-left: 2em;
-}
-
-.note {
-  display:none;
-}
-
-.content-text:hover {
-  border-left:1px solid #eeeeee;
-}
-
-.content-text ul li a:hover {
-  color:#4fc3f7;
-}
-
-.summary p{
-  color: black;
-}
-
-.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
-  border-left:1px solid #eeeeee;
-}
-
-.big-text {
-  padding-top: 0;
+@page {
+  margin: 0.6in;
 }

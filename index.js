@@ -14,26 +14,18 @@ function render(resume) {
 		resume.basics.website = resume.basics.url;
 	}
 
-	// Get a country from the country code
-	resume.basics.location.country = countries[resume.basics.location.countryCode];
-
-	// Remove http and www from url
-	Handlebars.registerHelper('no-http', function(options) {
-		this.url = this.url.replace(/(https?:\/\/)?(www\.)?/, "");
-		return options.fn(this);
-	});
-
-	// Get a font awsome class from a name
-	Handlebars.registerHelper('fontAwesome', function(str) {
-		var normalized = String(str || '').trim().toLowerCase();
-		if (normalized === 'spotify') return 'fa-spotify';
-		return "fa-" + normalized + "-square";
-	});
+	// Get a country from the country code when location exists.
+	if (resume && resume.basics && resume.basics.location && resume.basics.location.countryCode) {
+		resume.basics.location.country = countries[resume.basics.location.countryCode];
+	}
 
 	// http://stackoverflow.com/a/31632215/838789
 	Handlebars.registerHelper({
 			and: function (v1, v2) {
 					return v1 && v2;
+			},
+			eq: function (v1, v2) {
+					return v1 === v2;
 			},
 			or: function (v1, v2) {
 					return v1 || v2;

@@ -1,60 +1,20 @@
-@media(max-width:795px) {
-  .paper {
-    width:96%;
+@media (max-width: 720px) {
+  .resume {
+    margin: 16px auto 32px;
+    padding: 0 16px;
   }
 
-  .pic{
-    cursor: auto;
+  .header h1 {
+    font-size: 20pt;
   }
 
-  .content-cat{
-    padding-left:1%;
+  .contact-list {
+    flex-direction: column;
+    gap: 4px;
   }
 
-  .content-wrapper{
-    padding-left: 1%;
-    padding-right: max(1%, 1rem);
-  }
-
-  .profiles-listing ul li, .profiles-listing ul li:first-child{
-    width: 49%;
-  }
-
-  .small-fullwidth-row{
-    display: block;
-  }
-
-  .small-fullwidth-row div{
-    display: block;
-    width:100%;
-  }
-
-  .small-fullwidth-row .content-text{
-    border-left: 2px solid #dddddd;
-  }
-
-  .small-center{
-    text-align: center;
-  }
-
-  .work-listing .first-listing{
-    margin-top: 0.45em;
-  }
-
-  .work-listing .small-center{
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .top-content h3{
-    width: 100px;
-  }
-
-  .summary p{
-    margin-left: 1em;
-  }
-
-  .work-listing p {
-    margin-left: 1em;
+  .contact-list li::before {
+    content: "";
+    margin: 0;
   }
 }
